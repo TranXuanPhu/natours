@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
 const express = require('express');
+const handlebars = require('express-handlebars');
 const app = express();
 
 app.get('/', (req, res) => {
