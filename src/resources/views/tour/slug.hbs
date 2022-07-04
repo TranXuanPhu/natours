@@ -1,0 +1,76 @@
+<section class='section-header'>
+  <div class='header__hero'>
+    <div class='header__hero-overlay'>&nbsp;</div>
+    <img
+      class='header__hero-img'
+      src='/images/tours/{{tour.imageCover}}'
+      alt='{{tour.name}}'
+    />
+  </div>
+  <div class='heading-box'>
+    <h1 class='heading-primary'>
+      <span>{{tour.name}} tour</span>
+    </h1>
+    <div class='heading-box__group'>
+      <div class='heading-box__detail'>
+        <i class='bi bi-clock heading-box__icon'></i>
+        <span class='heading-box__text'>{{tour.duration}} days</span>
+      </div>
+      <div class='heading-box__detail'>
+        <i class='bi bi-geo-alt-fill heading-box__icon'></i>
+        <span class='heading-box__text'>Miami, USA</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class='section-description'>
+  <div class='overview-box'>
+    <div>
+      <div class='overview-box-__group'>
+        <h2 class='heading-secondary ma-bt-lg'>Quck facts</h2>
+        <div class='overview-box__detail'>
+          <i class='bi bi-calendar overview-box__icon'></i>
+          <span class='overview-box__label'>Next data</span>
+          <span class='overview-box__text'>{{startDates}}</span>
+        </div>
+        <div class='overview-box__detail'>
+          <i class='bi bi-arrow-up-right overview-box__icon'></i>
+          <span class='overview-box__label'>Difficulty</span>
+          <span class='overview-box__text'>{{tour.difficulty}}</span>
+        </div>
+        <div class='overview-box__detail'>
+          <i class='bi bi-person-fill overview-box__icon'></i>
+          <span class='overview-box__label'>Participants</span>
+          <span class='overview-box__text'>{{tour.maxGroupSize}}</span>
+        </div>
+        <div class='overview-box__detail'>
+          <i class='bi bi-star overview-box__icon'></i>
+          <span class='overview-box__label'>Rating</span>
+          <span class='overview-box__text'>{{tour.ratingsAverage}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='description-box'>
+    <h2 class='heading-secondary ma-bt-lg'>About {{tour.name}} tour</h2>
+    {{#each descriptions}}
+      <p class='description__text'>{{this}}</p>
+    {{/each}}
+  </div>
+</section>
+
+
+<section class="section-cta">
+  <div class="cta">
+    <div class="cta__img cta__img--logo">
+      <img src="/images/logo-white.png" alt=Natours logo"">
+    </div>
+    <div class="cta__content">
+      <h2 class="heading-secondary">What are you waiting for?</h2>
+      <p class="cta__text">{{tour.duration}} days. 1 adventure. Infinite memories. Make it yours today!</p>
+      <button class="btn btn--green span-all-rows" id="book-tour" data-tour-id="{{tour._id}}">Book tour now!</button>
+    </div>
+  </div>
+</section>

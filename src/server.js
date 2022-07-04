@@ -1,15 +1,11 @@
+// NOTE: config in process.env
 const dotenv = require('dotenv');
-//config in process.env
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: './src/config/variables.env' });
+const db = require('./config/database/index.js');
+const app = require('./app.js');
 
-const express = require('express');
-const handlebars = require('express-handlebars');
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hello World !');
-});
-
+// NOTE: connect database
+db.connect();
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

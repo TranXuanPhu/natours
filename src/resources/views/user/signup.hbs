@@ -1,0 +1,70 @@
+<main class='main'>
+  <div class='singup-form'>
+    <h2 class='heading-secondary ma-bt-lg'>Create your account!</h2>
+    <form
+      name='signup'
+      action='/users/signup'
+      method='POST'
+      class='form form--signup'
+    >
+      <div class='form__group'>
+        <label class='form__label' for='name'>Your name</label>
+        <input
+          type='text'
+          class='form__input'
+          id='name'
+          name='name'
+          type='text'
+          placeholder=''
+          required=''
+        />
+
+      </div>
+      <div class='form__group'>
+        <label class='form__label' for='email'>Email address</label>
+        <input
+          type='text'
+          class='form__input'
+          id='name'
+          type='text'
+          name='email'
+          placeholder='you@example.com'
+          required=''
+        />
+
+      </div>
+      <div class='form__group ma-bt-md'>
+        <label class='form__label' for='password'>Password
+          <input
+            class='form__input'
+            id='password'
+            type='password'
+            name='password'
+            placeholder='••••••••'
+            required=''
+            minlength='8'
+          />
+        </label>
+      </div>
+      <div class='form__group ma-bt-md'>
+        <label class='form__label' for='passwordConfirm'>confirm Password
+          <input
+            class='form__input'
+            id='passwordConfirm'
+            type='password'
+            name='passwordConfirm'
+            placeholder='••••••••'
+            required=''
+            minlength='8'
+          />
+        </label>
+      </div>
+      <div class='form__group'>
+        <button type='submit' class='btn btn--green' id='btn--submit'>Sign up</button>
+      </div>
+    </form>
+  </div>
+
+</main>
+
+<script src='js/user/signup.js'></script>

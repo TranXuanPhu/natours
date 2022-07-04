@@ -1,0 +1,89 @@
+<main class='main'>
+  <div class='user-view'>
+    <nav class='user-view__menu'>
+      <ul class='side-nav'>
+        <li class='side-nav--active'>
+          <a href='/me'><i class='bi bi-gear'></i><span
+              class='ps-3'
+            >SETTINGS</span></a>
+        </li>
+        <li class='side-nav'>
+          <a href='/my-bookings'><i class='bi bi-briefcase'></i><span
+              class='ps-3'
+            >MY BOOKINGS</span></a>
+        </li>
+        <li class='side-nav'>
+          <a href='/my-tour'><i class='bi bi-star'></i><span class='ps-3'>MY
+              REVIEWS</span></a>
+        </li>
+        <li class='side-nav'>
+          <a href='/my-billing'><i class='bi bi-credit-card'></i><span
+              class='ps-3'
+            >BILLING</span></a>s
+        </li>
+      </ul>
+    </nav>
+    <div class='user-view__content'>
+      <div class='user-view__form-container'>
+        <h2 class='heading-secondary ma-bt-md'>Your account settings</h2>
+        <form
+          class='form form-user-data'
+          action='/me/updateMe?_method=PATCH'
+          method='POST'
+          enctype='multipart/form-data'
+        >
+          <div class='form__group'>
+            <label class='form__label' for='name'>Your name</label>
+            <input
+              type='text'
+              class='form__input'
+              id='name'
+              name='name'
+              type='text'
+              placeholder=''
+              required=''
+              value='{{user.name}}'
+            />
+
+          </div>
+          <div class='form__group'>
+            <label class='form__label' for='email'>Email address</label>
+            <input
+              type='text'
+              class='form__input'
+              id='name'
+              type='text'
+              name='email'
+              placeholder='you@example.com'
+              required=''
+              value='{{user.email}}'
+            />
+          </div>
+          <div class='form__group form__photo-upload'>
+            <img
+              class='form__user-photo'
+              {{#if image}}
+                   src='data:{{image.contentType}};base64,{{image.data}}'
+              {{else}}
+                src='/images/users/default.jpg'
+              {{/if}}
+              alt='User photo'
+            />
+            <input
+              class='form__upload'
+              type='file'
+              accept='image/*'
+              id='photo'
+              name='photo'
+            />
+            <label for='photo'>Choose new photo</label>
+          </div>
+          <div class='form__group right'>
+            <button class='btn btn--small btn--green'>Save settings</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</main>

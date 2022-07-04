@@ -1,0 +1,39 @@
+<header class='header'>
+  <nav class='nav nav--tours'>
+    <a href='/' class='nav__el'>All tours</a>
+    <form class='nav__search'>
+      <button class='nav__search-btn'>
+        <svg>
+          <use xlink:href='images/icons.svg#icon-search'></use>
+        </svg>
+      </button>
+      <input type='text' placeholder='Search tours' class='nav__search-input' />
+    </form>
+  </nav>
+  <div class='header__logo'>
+    <img src='/images/logo-white.png' alt='Natours logo' />
+    <div>
+    </div>
+  </div>
+  <nav class='nav nav--user'>
+    {{#if user}}
+      <a href='/logout' class='nav__el'>Log out</a>
+      <a href='/me' class='nav__el'>
+        <img
+           {{#if image}}
+                   src='data:{{image.contentType}};base64,{{image.data}}'
+              {{else}}
+                src='/images/users/default.jpg'
+              {{/if}}
+          alt='User photo'
+          class='nav__user-img'
+        />
+        <span>{{user.name}}</span>
+      </a>
+    {{else}}
+      <button class='nav__el'><a href='/login'> Log in</a></button>
+      <button class='nav__el nav__el--cta'><a href='/signup'>Sign up</a>
+      </button>
+    {{/if}}
+  </nav>
+</header>

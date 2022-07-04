@@ -1,0 +1,50 @@
+<div class="mt-4 px-4">
+  <h3>New Tour</h3>
+  <form method="POST" action="/tour/create"
+    <div class="mb-3 fs-3 fw-bolder">
+      <label for="name" class="form-label">name</label>
+       <p class="text-danger">{{{getErrorMessage errors 'name' }}}</p>
+      <input type="text" class="form-control fs-3" id="name" name="name"  />
+      <label for="duration" class="form-label">duration</label>
+        <p class="text-danger">{{{getErrorMessage errors 'duration' }}}</p>
+      <input
+        type="text"
+        class="form-control fs-3"
+        id="duration"
+        name="duration"
+      />
+      <label for="maxGroupSize" class="form-label">maxGroupSize</label>
+      <p class="text-danger">{{{getErrorMessage errors 'maxGroupSize' }}}</p>
+      <input type="text" class="form-control fs-3" id="maxGroupSize" name="maxGroupSize" />
+        <label for="difficulty" class="form-label">difficulty</label>
+        <p class="text-danger">{{{getErrorMessage errors 'difficulty' }}}</p>
+      <input type="text" class="form-control fs-3" id="difficulty" name="difficulty" />
+      <label for="price" class="form-label">price</label>
+      <p class="text-danger">{{{getErrorMessage errors 'price' }}}</p>
+      <input type="text" class="form-control fs-3" id="price" name="price" />
+        <label for="summary" class="form-label">summary</label>
+         <p class="text-danger">{{{getErrorMessage errors 'summary' }}}</p>
+      <input type="text" class="form-control fs-3" id="summary" name="summary" />
+        <label for="description" class="form-label">description</label>
+         <p class="text-danger">{{{getErrorMessage errors 'description' }}}</p>
+      <input type="text" class="form-control fs-3" id="description" name="description" />
+        <label for="imageCover" class="form-label">imageCover</label>
+        <p class="text-danger">{{{getErrorMessage errors 'imageCover' }}}</p>
+      <input type="text" class="form-control fs-3" id="imageCover" name="imageCover" />
+      <label for="images" class="form-label">images</label>
+      <p class="text-danger">{{{getErrorMessage errors 'images' }}}</p>
+      <input type="text" class="form-control fs-3" id="images" name="images" />
+        <label for="startDates" class="form-label">startDates</label>
+        <p class="text-danger">{{{getErrorMessage errors 'startDates' }}}</p>
+      <input type="datetime-local" class="form-control fs-3" id="startDates" name="startDates" />
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">New tour</button>
+  </form>
+</div>
+
+
+<script src="/js/tour/create.js">
+
+</script>
